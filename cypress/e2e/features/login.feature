@@ -9,5 +9,5 @@ Feature: login
         Then navego ate pagina do menu '<menu>'
 
         Examples:
-            | usuario | senha    | headerLogado | menu        |
-            | Admin   | admin123 | Dashboard    | Recruitment |
+            | usuario | senha    | headerLogado | menu |
+            | Admin   | admin123 | Dashboard    | PIM  |
