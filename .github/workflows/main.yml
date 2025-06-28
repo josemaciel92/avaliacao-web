@@ -10,4 +10,5 @@ name: Checkout
 name: Cypress.io rodando testes chrome
         uses: cypress-io/github-action@v5.8.2
         with:
+          command: npm install
           command: npx cypress run --browser chrome
