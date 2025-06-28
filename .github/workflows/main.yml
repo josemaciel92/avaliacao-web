@@ -5,10 +5,9 @@ jobs:
   cypress-run-chrome:
     runs-on: ubuntu-latest
     steps:
-name: Checkout
-             uses: actions/setup-node@v4
-name: Cypress.io rodando testes chrome
+      - name: Checkout # <-- Indentado corretamente
+        uses: actions/checkout@v3.5.3
+      - name: Cypress.io rodando testes chrome # <-- Indentado corretamente
         uses: cypress-io/github-action@v5.8.2
         with:
-          command: npm install
           command: npx cypress run --browser chrome
