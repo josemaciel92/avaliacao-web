@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "npx cypress open",
-    "allure-chro:ecommerce": "cypress run --browser chrome --headless --spec \"cypress/e2e/features/Ecommerce.feature\"",
-    "allure:repo": "allure generate allure-results --clean -o allure-report",
-    "allure:clea": "rm -r allure-results/ allure-report cypress/screenshots || true"
+    "dev": "npx cypress open"
   },
   "keywords": [],
   "author": "",
