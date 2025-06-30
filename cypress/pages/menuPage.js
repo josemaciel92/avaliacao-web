@@ -4,12 +4,26 @@
 export class MenuPage {
 
     elements = {
-     
+        txtMenu: "(//div[@id='rightPanel']//h1[@class='title'])[1]"
     }
 
-    validarNavegacaoMenu(menu) {
-        cy.xpath(`//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name' and text()='${menu}']`, { timeout: 30000 }).click()
-        cy.xpath(`//h6[@class='oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module' and text()='${menu}']`, { timeout: 30000 }).should("have.text", menu)
+    navegacaoMenu(menu) {
+        cy.xpath(this.elements.txtMenu, { timeout: 30000 }).should('be.visible')
+
+        switch (menu) {
+            case 'Update Contact Info':
+                cy.log(`Clicando no item de menu: ${menu}`)
+                cy.xpath(`//a[contains(text(),'${menu}')]`)
+                    .should('be.visible')
+                    .click()
+                break
+            case 'Find Transactions': // Exemplo de outro item de menu
+                cy.log(`Clicando no item de menu: ${menu}`);
+                cy.xpath(`//a[contains(text(),'${menu}')]`)
+                    .should('be.visible')
+                    .click()
+                break
+        }
     }
 
 }

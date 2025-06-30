@@ -66,5 +66,4 @@ export class ProdutosPage {
             return valorregex[0]
         }
     }
-
 }

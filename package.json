@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx cypress open",
+    "allure-chro:ecommerce": "cypress run --browser chrome --headless --spec \"cypress/e2e/features/Ecommerce.feature\"",
+    "allure:repo": "allure generate allure-results --clean -o allure-report",
+    "allure:clea": "rm -r allure-results/ allure-report cypress/screenshots || true"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +15,7 @@
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^22.2.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
+    "@shelex/cypress-allure-plugin": "^2.41.2",
     "cypress": "^14.5.0",
     "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-xpath": "^2.0.1",

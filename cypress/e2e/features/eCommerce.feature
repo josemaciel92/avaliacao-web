@@ -1,4 +1,4 @@
-Feature: E-commerce
+Feature: Ecommerce
 
     Background: Acessar url da aplicacao
         Given que acesso o portal saucedemo

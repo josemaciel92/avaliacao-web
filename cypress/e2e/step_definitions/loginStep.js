@@ -4,18 +4,18 @@ import { LoginPage } from "../../pages/loginPage";
 
 const oLoginPage = new LoginPage();
 
-Given("que acesso o portal OrangeHRM", () => {
+Given("que acesso o portal Parabank", () => {
     cy.clearAllCookies()
     cy.clearAllLocalStorage()
     cy.clearAllSessionStorage()
-    cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+    cy.visit("https://parabank.parasoft.com/parabank/index.htm")
 })
 
 Given("que realizo o login com credenciais validas {string} {string}", (usuario, senha) => {
-    oLoginPage.realizarLoginOrangeHRM(usuario, senha)
+    oLoginPage.realizarLoginParabank(usuario, senha)
 })
 
-Given("devo ser redirecionado para a home logada da aplicacao OrangeHRM {string}", (headerLogado) => {
+Given("devo ser redirecionado para a home logada da aplicacao Parabank {string}", (headerLogado) => {
     oLoginPage.validarLoginComSucesso(headerLogado)
 })
 
